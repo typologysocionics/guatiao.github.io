@@ -1,300 +1,353 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><script src="http://127.0.0.1:20250/api/monitor.js?token=nZ94GatHdwNg1oqCc4JAeL6tYtEcDk6a&runId=f37ab937-a669-4fac-a3c4-4e443b8b8296" crossorigin="anonymous"></script>
+
+<head>
+    <script
+        src="http://127.0.0.1:20250/api/monitor.js?token=nZ94GatHdwNg1oqCc4JAeL6tYtEcDk6a&runId=f37ab937-a669-4fac-a3c4-4e443b8b8296"
+        crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LXX耻辱柱</title>
     <style>
-        
-            body { 
-                font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; 
-                line-height: 1.6; color: #24292f; background-color: #ffffff; 
-                max-width: 980px; margin: 0 auto; padding: 25px; 
-            }
-            h1,h2,h3,h4,h5,h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
-            h1 { font-size: 2em; border-bottom: 1px solid #d0d7de; padding-bottom: .3em; }
-            h2 { font-size: 1.5em; border-bottom: 1px solid #d0d7de; padding-bottom: .3em; }
-            p { margin-bottom: 16px; }
-            code { background-color: rgba(175,184,193,0.2); border-radius: 6px; font-size: 85%; margin: 0; padding: .2em .4em; }
-            pre { background-color: #f6f8fa; border-radius: 6px; font-size: 85%; line-height: 1.45; overflow: auto; padding: 16px; }
-            blockquote { border-left: .25em solid #d0d7de; color: #656d76; margin: 0; padding: 0 1em; }
-            table { border-collapse: collapse; border-spacing: 0; width: 100%; margin-bottom: 16px; }
-            td,th { border: 1px solid #d0d7de; padding: 6px 13px; }
-            th { background-color: #f6f8fa; font-weight: 600; }
-            ul,ol { padding-left: 2em; margin-bottom: 16px; }
-            .toc { background-color: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 16px; margin: 16px 0; }
-            .toc ul { margin: 0; padding-left: 1.5em; list-style-type: none; }
-            .toc > ul { padding-left: 0; }
-            .toc li { margin: 4px 0; }
-            .toc a, .toc a:link, .toc a:visited, .toc a:hover, .toc a:active { 
-                text-decoration: none !important; color: #0969da; font-weight: 500; 
-                border: none !important; outline: none !important;
-            }
-            .toc a:hover { 
-                color: #0550ae !important; background-color: rgba(9, 105, 218, 0.1) !important;
-                padding: 2px 4px; border-radius: 3px;
-            }
-            .toclink, .toclink:link, .toclink:visited, .toclink:hover, .toclink:active {
-                text-decoration: none !important; border-bottom: none !important;
-                border: none !important; outline: none !important;
-            }
-            .headerlink { display: none !important; }
-            .admonition { margin: 1em 0; padding: 12px; border-left: 4px solid #0969da; background-color: #ddf4ff; }
-            .task-list-item { list-style-type: none; }
-            .task-list-item input { margin-right: 8px; }
-            .mermaid { background-color: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 16px; margin: 16px 0; }
-            .mermaid pre { background: transparent; border: none; padding: 0; margin: 0; }
-            .mermaid code { background: transparent; padding: 0; font-size: 14px; }
-        
-        pre { line-height: 125%; }
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
-.highlight .hll { background-color: #ffffcc }
-.highlight .c { color: #3D7B7B; font-style: italic } /* Comment */
-.highlight .err { border: 1px solid #F00 } /* Error */
-.highlight .k { color: #008000; font-weight: bold } /* Keyword */
-.highlight .o { color: #666 } /* Operator */
-.highlight .ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #9C6500 } /* Comment.Preproc */
-.highlight .cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
-.highlight .gd { color: #A00000 } /* Generic.Deleted */
-.highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
-.highlight .gr { color: #E40000 } /* Generic.Error */
-.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: #008400 } /* Generic.Inserted */
-.highlight .go { color: #717171 } /* Generic.Output */
-.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.highlight .gs { font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight .gt { color: #04D } /* Generic.Traceback */
-.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.highlight .kp { color: #008000 } /* Keyword.Pseudo */
-.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.highlight .kt { color: #B00040 } /* Keyword.Type */
-.highlight .m { color: #666 } /* Literal.Number */
-.highlight .s { color: #BA2121 } /* Literal.String */
-.highlight .na { color: #687822 } /* Name.Attribute */
-.highlight .nb { color: #008000 } /* Name.Builtin */
-.highlight .nc { color: #00F; font-weight: bold } /* Name.Class */
-.highlight .no { color: #800 } /* Name.Constant */
-.highlight .nd { color: #A2F } /* Name.Decorator */
-.highlight .ni { color: #717171; font-weight: bold } /* Name.Entity */
-.highlight .ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
-.highlight .nf { color: #00F } /* Name.Function */
-.highlight .nl { color: #767600 } /* Name.Label */
-.highlight .nn { color: #00F; font-weight: bold } /* Name.Namespace */
-.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.highlight .nv { color: #19177C } /* Name.Variable */
-.highlight .ow { color: #A2F; font-weight: bold } /* Operator.Word */
-.highlight .w { color: #BBB } /* Text.Whitespace */
-.highlight .mb { color: #666 } /* Literal.Number.Bin */
-.highlight .mf { color: #666 } /* Literal.Number.Float */
-.highlight .mh { color: #666 } /* Literal.Number.Hex */
-.highlight .mi { color: #666 } /* Literal.Number.Integer */
-.highlight .mo { color: #666 } /* Literal.Number.Oct */
-.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
-.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
-.highlight .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
-.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
-.highlight .se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
-.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.highlight .si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
-.highlight .sx { color: #008000 } /* Literal.String.Other */
-.highlight .sr { color: #A45A77 } /* Literal.String.Regex */
-.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
-.highlight .ss { color: #19177C } /* Literal.String.Symbol */
-.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #00F } /* Name.Function.Magic */
-.highlight .vc { color: #19177C } /* Name.Variable.Class */
-.highlight .vg { color: #19177C } /* Name.Variable.Global */
-.highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
-.highlight .il { color: #666 } /* Literal.Number.Integer.Long */
-        img {max-width: 100%;height: auto;}
-        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #24292f;
+            background-color: #ffffff;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 25px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+
+
+        /* Removing unused elements: code, pre, blockquote, table, th, td */
+
+        ul {
+            padding-left: 2em;
+            margin-bottom: 16px;
+        }
+
+        /* Removing .toc container styles, keeping .toclink used in anchors */
+
+        .toclink,
+        .toclink:link,
+        .toclink:visited,
+        .toclink:hover,
+        .toclink:active {
+            text-decoration: none !important;
+            border-bottom: none !important;
+            border: none !important;
+            outline: none !important;
+        }
+
+        .headerlink {
+            display: none !important;
+        }
+
+        /* Removing .admonition, .task-list-item, .mermaid, .linenos, .highlight */
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
+
 <body>
-    <h2 id="_1"><a class="toclink" href="#_1">前言</a><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>:::info<br />
-<strong><font style="color:#000000;">省流：</font></strong></p>
-<ul>
-<li><strong><font style="color:#000000;">@杨美娟的大娟巴（以下简称杨美娟、海市蜃楼或hssl）曾经开盒骚扰性少数，现在又和360一起用人肉手段扒人微博隐私信息，开盒威胁所有持反对态度的人，制造高压局面。</font></strong></li>
-<li><strong><font style="color:#000000;">@化思潮为膏潮5799（以下简称5799）和<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Etherealune666" title="GitHub User: Etherealune666">@Etherealune666</a>（以下简称666，小号@泯哼）助纣为虐，反挂条谎话连篇，包庇杨美娟人肉、开盒和威胁，参与网暴施压，并把所有的网暴行为美化为“受害者的自我防卫”。</font></strong></li>
-</ul>
-<p>:::</p>
-<p><font style="color:#000000;"></font></p>
-<p><font style="color:#000000;">继上次挂条仅存在一小时就被举报封禁后，涉事人</font><strong><font style="color:#000000;">5799</font></strong><font style="color:#000000;">的小号</font><strong><font style="color:#000000;">@还我命来5799</font></strong><font style="color:#000000;">发布了反挂条，其主张主要有四：</font></p>
-<h4 id="_2"><a class="toclink" href="#_5"><strong><font style="color:#000000;">一、没有实质开盒</font></strong></a><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<h4 id="_3"><a class="toclink" href="#_6"><strong><font style="color:#000000;">二、举报行为与“人肉搜索”“开盒”行为没有区别</font></strong></a><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
-<h4 id="_4"><a class="toclink" href="#_7"><strong><font style="color:#000000;">三、网暴方不存在小团体</font></strong></a><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<h4 id="_41"><a class="toclink" href="#_7"><strong><font style="color:#000000;">四、5799和666是无辜被连坐</font></strong></a><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<p><font style="color:#000000;">并将原挂条对对方一系列侵害行为的陈述，称为“抹黑”。</font></p>
-<p><font style="color:#000000;">是</font><strong><font style="color:#000000;">【事实】</font></strong><font style="color:#000000;">还是</font><strong><font style="color:#000000;">【抹黑】</font></strong><font style="color:#000000;">？</font></p>
-<p><font style="color:#000000;">谁才是</font><strong><font style="color:#000000;background-color:#FBDE28;">【加害者】</font></strong><font style="color:#000000;">？是谁在</font><strong><font style="color:#000000;background-color:#FBDE28;">【传播他人隐私】</font></strong><font style="color:#000000;">？是谁在</font><strong><font style="color:#000000;background-color:#FBDE28;">【组团进行网络暴力】</font></strong><font style="color:#000000;">？谁在</font><strong><font style="color:#000000;background-color:#FBDE28;">【连坐】</font></strong><font style="color:#000000;">？谁是真的在</font><strong><font style="color:#000000;background-color:#FBDE28;">【污蔑】</font></strong><font style="color:#000000;">？</font><strong><font style="color:#000000;">我相信群众的目光是雪亮的。</font></strong><font style="color:#000000;">此文能做的，只有将大家所承受的一切都记录在案，并呈递至诸位眼前。</font></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/01.jpg" /></p>
-<p>本次人肉信息传播者360在qq群内发言：“本来<font style="background-color:#FBDE28;">这回</font>就没开盒”。很好，那就来盘点一下杨美娟之前的开盒战绩。</p>
-<h2 id="_5"><a class="toclink" href="#_5"><strong><font style="color:#000000;">一、开盒铁证：杨美娟为开盒惯犯且开盒性少数</font></strong></a><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="杨美娟开合现场，无需多言" src="images/02.png" /></p>
-<p><strong><font style="color:#000000;">然而，杨美娟真的只开盒恐跨人士吗？</font></strong><strong><font style="color:#000000;">  </font></strong></p>
-<p><font style="color:#000000;">杨美娟（早年微博昵称为“你就是那海市蜃楼”）早</font><strong><font style="color:#000000;">在2024年9月中旬，就在lxx圈已卷入过一场开盒纷争。</font></strong></p>
-<p><strong><font style="color:#000000;">杨美娟称类圈一位</font></strong><strong>未成年人</strong><strong><font style="color:#000000;">“反跨反酷”并教唆人将其开盒；随后，</font></strong><strong><font style="background-color:#FBDE28;">从未持过反跨反酷立场</font></strong><strong>的</strong><strong><font style="color:#000000;">苦主</font></strong><strong><font style="background-color:#FBDE28;">赛博幽灵（小号wiring_cook)</font></strong><strong><font style="color:#000000;">，仅因为</font></strong><strong>发表</strong><strong><font style="background-color:#FBDE28;">不支持开盒wcn</font></strong><strong>意见</strong><strong><font style="color:#000000;">，就被</font></strong><strong>连坐开盒</strong><strong><font style="color:#000000;">。</font></strong></p>
-<p><font style="color:#000000;">杨美娟</font><strong><font style="color:#000000;">不仅恐吓苦主</font></strong><strong><font style="color:rgb(15, 17, 21);">赛博幽灵本人</font></strong><strong><font style="color:#000000;">，还继续</font></strong><strong>恐吓转发区持相同观点的网友</strong><strong><font style="color:#000000;">。</font></strong></p>
-<p><font style="color:#000000;">而被</font><strong><font style="color:#000000;background-color:#FBDE28;">连坐开盒威胁</font></strong><font style="color:#000000;background-color:#FBDE28;">、</font><strong><font style="color:#000000;background-color:#FBDE28;">被扒现生信息、受短信轰炸骚扰</font></strong><font style="color:#000000;">的苦主，正是</font><strong><font style="color:#000000;">杨美娟口口声声说要保护的</font></strong><strong><font style="color:rgba(255,59,59,1);">“性少数”</font></strong><strong><font style="color:#000000;">。</font></strong></p>
-<p><font style="color:#000000;">（</font><strong><font style="color:#000000;">下附图，已被迫销号</font></strong><font style="color:#000000;">）</font></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/03.png" /></p>
-<p><strong><font style="color:#000000;">（下图打码部分为涉及受害者身份的私密信息,是小号艾特+QQ号+全名）</font></strong></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/04.png" /></p>
-<p><font style="color:#000000;">大家都知道杨美娟是开盒人，而杨美娟对此的回应是：</font><strong><font style="color:#000000;">开盒人不是我，是我</font></strong><strong><font style="color:#000000;background-color:#ECAA04;">朋友</font></strong><strong><font style="color:#000000;">。</font></strong><font style="color:#000000;">我们已经找到了这位</font><font style="color:#000000;background-color:#ECAA04;">“</font><strong><font style="color:#000000;background-color:#ECAA04;">朋友”</font></strong><font style="color:#000000;">，正是在杨美娟hssl时期在其微博留过言的</font><strong><font style="color:#000000;background-color:#ECAA04;">芒果椰奶冻</font></strong><font style="color:#000000;">。</font></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/05.png" /></p>
-<p><font style="color:#000000;"> 这位被</font><font style="color:#000000;background-color:#FBDE28;">杨美娟</font><font style="color:#000000;">召唤出来的“前笔仙”</font><font style="color:#000000;background-color:#ECAA04;">芒果椰奶冻</font><font style="color:#000000;">（小号@苦命的奥利安）是圈外人士，杨美娟教唆并指使芒果椰奶冻开盒</font><font style="color:#DF2A3F;">反terf友酷</font><strong><font style="color:#000000;">赛博幽灵  </font></strong></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/06.png" /></p>
-<p><font style="color:#000000;">面对受害者的控诉，杨美娟的回应是</font><strong><font style="color:#000000;">：</font></strong><strong><font style="color:rgba(255,59,59,1);">立即与芒果椰奶冻切割</font></strong>。<font style="color:#000000;">杨美娟</font>利用芒果椰奶冻其不稳定的精神状态、开盒技术、短信轰炸渠道达到ta宣泄暴力，封缄异见的目的后，再立即抛弃这个工具，<strong><font style="color:rgba(255,59,59,1);">假装自己与此事无关</font></strong>。</p>
-<p>不仅如此，ymj在拱火成功后，面对逐渐不可控的损害后果，竟<font style="color:#DF2A3F;">劝诫</font>受害者向芒果椰奶冻滑跪<font style="color:#DF2A3F;">认错</font>。</p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="自称无关人士" src="images/07.jpg" /></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="劝受害者【赛博幽灵】滑跪" src="images/08.png" /></p>
-<p><font style="color:#000000;background-color:#FBDE28;">海市蜃楼</font><font style="color:#000000;">切割了负责开盒的</font><strong><font style="color:#000000;background-color:#ECAA04;">芒果椰奶冻</font></strong><font style="color:#000000;">并</font><strong><font style="color:#000000;">转生新号</font></strong><strong><font style="background-color:#FBDE28;">杨美娟的大娟巴</font></strong><strong><font style="color:#000000;">后，</font></strong><font style="color:#000000;">杨美娟发现</font><strong><font style="color:rgba(255,59,59,1);">盒武器</font></strong><font style="color:#000000;">威慑不仅</font><strong><font style="color:#000000;">可以让异己者全部</font></strong><strong><font style="color:rgba(255,59,59,1);">闭嘴</font></strong><font style="color:#000000;">，还能通过</font><strong><font style="color:rgba(255,59,59,1);">连坐胁迫其互关、亲友</font></strong><font style="color:#000000;">等方式，</font><strong><font style="color:#000000;">逼被ta锁定为施暴对象的人出面承受ta的攻击性。</font></strong></p>
-<p><font style="color:#000000;">于是在</font><font style="color:rgba(255,59,59,1);">本次事件</font><font style="color:#000000;">中，ta又开始</font><strong><font style="color:#000000;">营造开盒的恐怖氛围</font></strong><font style="color:#000000;">，甚至直接发表</font><strong><font style="color:#000000;">连坐开盒言论</font></strong><font style="color:#000000;">（下附图）。</font></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/09.png" /></p>
-<p><font style="color:#000000;">（互关1）</font></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/10.png" /></p>
-<p><font style="color:#000000;">（互关2）</font></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/11.png" /></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/12.jpg" /></p>
-<p>受害者之一在微博的控诉，由<strong>受害者们公示事件中的意见不统一</strong>（下图）可以看出，5799在反挂条中的内容，只是为了将受害者们<strong><font style="color:#DF2A3F;">按观点进行分割</font></strong>（甚至还反咬一口，<strong>将ta们投射为和自己一样的“小团体”</strong>）。</p>
-<p><font style="color:#DF2A3F;">ta刻意引导大众焦点，</font><strong><font style="color:#DF2A3F;">模糊己方小团体冲进受害者博客进行网暴，默许杨美娟人肉搜索性少数路人</font></strong><font style="color:#DF2A3F;">的劣行</font><strong><font style="color:#DF2A3F;">，反倒扯酷儿立场作为排除异己，攻击受害者们的手段</font></strong><font style="color:#DF2A3F;">！</font></p>
-<p>正如受害者在<strong>第三点</strong>中所说：<strong>ta们凭什么代表全体酷儿出征</strong>？</p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/13.png" /></p>
-<p><font style="color:#000000;">由此可见，无论各位是什么身份，</font><strong><font style="color:#000000;">只要和小团体的敌人有关系，就有可能被连坐开盒。</font></strong><font style="color:#000000;"></font></p>
-<p><font style="color:#000000;">lxx圈已经出现了</font><strong><font style="color:#000000;">把异己都打成反酷，并进行开盒与辱骂的集体</font></strong><font style="color:#000000;">，其中</font><strong><font style="color:#000000;background-color:#FBDE28;">杨美娟</font></strong><strong><font style="color:#000000;">、</font></strong><strong><font style="color:#000000;background-color:#FBDE28;">360</font></strong><font style="color:#000000;">等人已有</font><font style="color:#000000;background-color:#FBDE28;">多次</font><strong><font style="color:#DF2A3F;background-color:#FBDE28;">威胁开盒</font></strong><font style="color:#000000;">、</font><strong><font style="color:#DF2A3F;background-color:#FBDE28;">教唆开盒</font></strong><font style="color:#000000;">与</font><strong><font style="color:#DF2A3F;background-color:#FBDE28;">直接开盒</font></strong><font style="color:#000000;">的行为，</font><strong><font style="color:#DF2A3F;background-color:#FBDE28;">5799</font></strong><strong><font style="color:#DF2A3F;">与</font></strong><strong><font style="color:#DF2A3F;background-color:#FBDE28;">666</font></strong><strong><font style="color:#DF2A3F;">两人</font></strong><font style="color:#DF2A3F;">在群内默许360的开盒威胁言论</font><font style="color:#000000;">，在已知杨美娟有开盒行为之后仍然进行</font><strong><font style="color:#DF2A3F;background-color:#FBDE28;">包庇</font></strong><strong><font style="color:#000000;">、</font></strong><strong><font style="color:#DF2A3F;background-color:#FBDE28;">声援</font></strong><font style="color:#000000;">。</font></p>
-<p><font style="color:#000000;">这样的行为早已与5799和杨美娟宣称的“为酷儿反击”，“保护酷儿”早已</font><strong><font style="color:#DF2A3F;">相去甚远</font></strong><font style="color:#000000;">。</font></p>
-<p><font style="color:#000000;">事实是，ta为了享受</font><strong><font style="color:#000000;">拿起道德大棒无限施加暴力的快感</font></strong><font style="color:#000000;">，已经</font><strong><font style="color:#000000;">伤害了不止一个酷儿</font></strong><font style="color:#000000;">。与ta意见不同的</font><strong><font style="color:#000000;">酷儿</font></strong><font style="color:#000000;">，不仅会遭受</font><strong><font style="color:#000000;">网络暴力</font></strong><font style="color:#000000;">、</font><strong><font style="color:#000000;">开盒人肉</font></strong><font style="color:#000000;">等真实可感的攻击，还都会被ta及ta的小团体瞬间</font><strong><font style="color:#000000;">归为女性</font></strong><font style="color:#000000;">，并给予</font><strong><font style="color:#000000;">“母zhu”</font></strong><font style="color:#000000;">等绰号，彻底</font><strong><font style="color:#000000;">misgender，甚至被指出，也只是一句轻飘飘的“对不起”。</font></strong></p>
-<p><strong><font style="color:#000000;">而其ta受害人甚至没有misgender 5799（已向5799本人确认过，5799无所谓代词使用），</font></strong><strong><font style="color:#DF2A3F;">加害者们却是冲进他人主页转发区进行恶意揣测、攻击</font></strong><font style="color:#000000;">。可见这个小团体</font><strong><font style="color:#000000;">对misgender的“抵制”、对代词称呼的要求</font></strong><font style="color:#000000;">（如：对被说过可以使用</font><strong><font style="color:#000000;">任意代词</font></strong><font style="color:#000000;">的人，要求对方在</font><strong><font style="color:#000000;">未经说明</font></strong><font style="color:#000000;">的情况下，</font><strong><font style="color:#000000;">猜出</font></strong><font style="color:#000000;">对方希望被不定时切换不同代词称呼，并猜出各个代词的切换频率），</font><strong><font style="color:#000000;">会随着ta们的心情随意改变</font></strong><font style="color:#000000;">。</font></p>
-<p><font style="color:#000000;">可见，在ta们眼中，“尊重”酷儿，</font><strong><font style="color:#000000;">不是</font></strong><font style="color:#000000;">根植内心的信念，</font><strong><font style="color:#000000;">而是</font></strong><font style="color:#000000;">ta们</font><strong><font style="color:#000000;">打击异己、建立话语霸权的一把5器</font></strong><font style="color:#000000;">。</font></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="“用得均匀”" src="images/14.png" /></p>
-<h2 id="_6"><a class="toclink" href="#360"><strong><font style="color:#000000;">二、杨美娟和360人肉搜索篇</font></strong></a><a class="headerlink" href="#360" title="Permanent link">&para;</a></h2>
-<h3 id="360"><a class="toclink" href="#_6"><font style="color:#000000;">请看</font><strong><font style="color:#000000;">人肉搜索</font></strong><font style="color:#000000;">和</font><strong><font style="color:#000000;">开盒</font></strong><font style="color:#000000;">的</font><strong><font style="color:#000000;">基本定义（二者在法律意义上并无区别，都是同类违法行为）</font></strong><font style="color:#000000;">：</font></a><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/15.png" /><!-- 这是一张图片，ocr 内容为： --><br />
-<img alt="" src="images/16.png" /></p>
-<p>杨美娟和360<strong>人肉开盒并传播</strong>了被威胁的异见者及<strong>毫无关系的第三人</strong>的个人信息，包括<strong>姓名，QQ号</strong>及<strong>学校</strong>。群里有人<font style="color:#000000;">发表</font><strong><font style="color:#000000;">“圣地巡礼”</font></strong><font style="color:#000000;">的言论，暗示群友</font><strong><font style="color:#000000;">线下骚扰</font></strong><font style="color:#000000;">。</font></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/17.jpg" /></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/18.jpg" /></p>
-<p><font style="color:#000000;">而</font><font style="color:#000000;background-color:#FBDE28;">杨美娟的大娟巴</font><font style="color:#000000;">对自己的开盒行为进行辩解的方式——就是将</font><strong><font style="color:#000000;">受害者隐私信息</font></strong><font style="color:#000000;">在自己微博主页</font><strong><font style="color:#000000;">再次无码公开传播。</font></strong></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="此为杨美娟小号" src="images/19.png" /><font style="color:#000000;"></font></p>
-<p><font style="color:#000000;">并和360在</font><strong><font style="color:#000000;">120人QQ群</font></strong><font style="color:#000000;">中继续</font><strong><font style="color:#000000;">肆意</font></strong><strong><font style="color:#DF2A3F;">发布</font></strong><strong><font style="color:#000000;">、</font></strong><strong><font style="color:#DF2A3F;">辱骂</font></strong><font style="color:#000000;">。在受害者微博主页</font><strong><font style="color:#DF2A3F;">地毯式搜寻个人信息</font></strong><font style="color:#000000;">后，将受害者</font><strong><font style="color:#000000;">半年多前偶然进行的生活分享</font></strong><font style="color:#000000;">诽谤并辱骂其为</font><strong><font style="color:#000000;">“</font></strong><strong><font style="color:rgba(255,107,107,1);background-color:#000000;">露音癖</font></strong><strong><font style="color:#000000;">”</font></strong><font style="color:#000000;">、</font><strong><font style="color:#000000;">“</font></strong><strong><font style="color:rgba(255,107,107,1);background-color:#000000;">故意天天晒个人信息</font></strong><strong><font style="color:#000000;">”</font></strong><font style="color:#000000;">；对于挖掘出的个人信息，在群内进行针对性的</font><strong><font style="color:#DF2A3F;">攻击</font></strong><strong><font style="color:#000000;">、</font></strong><strong><font style="color:#DF2A3F;">辱骂</font></strong><font style="color:#000000;">。</font></p>
-<p><font style="color:#000000;">更有甚者，明知</font><strong><font style="color:#000000;">杨美娟有人肉搜索与二次传播受害者私人信息的行为</font></strong><font style="color:#000000;">后仍为杨美娟写下洗白开盒行为的博客。（另：此博客格式与5799反瓜条博客格式相同）</font></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="此为杨美娟小号" src="images/20.jpg" /></p>
-<p><strong><font style="color:#000000;">受害者</font></strong><font style="color:#000000;">完全</font><strong><font style="color:#000000;">与争议中心无关联</font></strong><font style="color:#000000;">，却</font><strong><font style="color:#000000;">无辜承受</font></strong><font style="color:#000000;">被</font><strong><font style="color:#000000;">开盒人肉、曝光个人信息</font></strong><font style="color:#000000;">的</font><strong><font style="color:#000000;">霸凌</font></strong><font style="color:#000000;">，事后还要</font><strong><font style="color:#000000;">被施暴者PUA</font></strong><font style="color:#000000;">（扭曲成受害者的错）</font><strong><font style="color:#000000;">、继续传播个人信息</font></strong><font style="color:#000000;">，这对受害者造成的伤害</font><strong><font style="color:#000000;">不可估量</font></strong><font style="color:#000000;">。</font></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/21.png" /><!-- 这是一张图片，ocr 内容为： --><br />
-<img alt="" src="images/22.png" /></p>
-<p><font style="color:#000000;">此后又</font><strong><font style="color:#000000;">人肉了另一个人</font></strong><font style="color:#000000;">，并将这两人连带社交帐号及个人隐私信息，均</font><strong><font style="color:#000000;">恶意P图</font></strong><font style="color:#000000;">发布在120人QQ群内</font><strong><font style="color:#000000;">。</font></strong></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/23.png" /><!-- 这是一张图片，ocr 内容为： --><br />
-<img alt="" src="images/24.jpeg" /></p>
-<p><font style="color:#000000;">杨美娟和360在</font><strong><font style="color:#000000;">无辜受害者</font></strong><font style="color:#000000;">的信息</font><strong><font style="color:#000000;">未主动授权</font></strong><font style="color:#000000;">给任何人的前提下，动员团体在其微博主页进行</font><strong><font style="color:#DF2A3F;">地毯式搜集</font></strong><font style="color:#000000;">，扒下来</font><strong><font style="color:#DF2A3F;">公开发布</font></strong><strong><font style="color:#000000;">、</font></strong><strong><font style="color:#DF2A3F;">羞辱</font></strong><strong><font style="color:#000000;">、</font></strong><strong><font style="color:#DF2A3F;">人身攻击</font></strong><font style="color:#000000;">，</font><strong><font style="color:#000000;">完全符合</font></strong><strong><font style="color:#DF2A3F;background-color:#FBDE28;">开盒</font></strong><strong><font style="color:#000000;">、</font></strong><strong><font style="color:#DF2A3F;background-color:#FBDE28;">人肉搜索</font></strong><strong><font style="color:#000000;">的定义</font></strong><font style="color:#000000;">。这是完全的</font><strong><font style="color:#DF2A3F;background-color:#FBDE28;">违法行为</font></strong><strong><font style="color:#000000;">、</font></strong><strong><font style="color:#DF2A3F;background-color:#FBDE28;">暴力行为</font></strong><font style="color:#000000;">。</font></p>
-<p><font style="color:#000000;"> </font><strong><font style="color:#000000;">如果连这个也看不懂，还可以请出杨美娟大帝的名言：不懂去问deepseek。</font></strong></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/25.png" /></p>
-<h2 id="_7"><a class="toclink" href="#3605799666">三、杨美娟/360/5799/666在同一个群里共商大事</font></strong></a><a class="headerlink" href="#3605799666" title="Permanent link">&para;</a></h2>
-<p><font style="color:#000000;">杨美娟向异见者的互关发出针对异见者的</font><strong><font style="color:#000000;">开盒威胁</font></strong><font style="color:#000000;">及</font><strong><font style="color:#000000;">连坐他人的威胁后，</font></strong><font style="color:#000000;">5799与666表面上在微博</font><font style="color:#DF2A3F;">卖惨</font><font style="color:#000000;">，声称自己与盒事件无关，声称不存在“小团体”：</font></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/51.jpg" /><!-- 这是一张图片，ocr 内容为： --><br />
-<img alt="" src="images/52.jpeg" /></p>
-<p><strong><font style="color:#000000;">实则在群内观看、响应“开团”。</font></strong></p>
-<p><font style="color:#000000;">（EthV=etln=etln666，cjg=陈建国=5799）</font></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/53.png" /></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/54.png" /></p>
-<p><font style="color:#000000;">并在微博散布</font><strong><font style="color:#DF2A3F;">受害者有罪论</font></strong><font style="color:#000000;">的观点，</font><font style="color:rgb(15, 17, 21);">试图</font><strong><font style="color:#DF2A3F;">为施暴行为正名</font></strong><font style="color:#000000;">，一边逃避责任，一边声称自己</font><strong><font style="color:#000000;">“事出有因”</font></strong><font style="color:#000000;">，无比虚伪！</font></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="究竟是何等法盲才会把举报、炸号跟受害者真实信息被未经允许传播画上等号？" src="images/55.jpeg" /></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="强行将【原挂条中采集的施暴者言论】与【受害人被收集、传播的现生信息】并列，依旧法盲" src="images/56.jpg" /></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="依旧法盲，详见下段" src="images/57.png" /></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="《中华人民共和国个人信息保护法》已对“个人信息”的定义及其法律性质作出了明确规定。5799在【反挂条】中声称“初版挂条”的行为与“开盒”无异，并指称该行为侵犯了其隐私。这一说法缺乏事实与法律依据，涉嫌构成诽谤。" src="images/58.png" /></p>
-<p><font style="color:#000000;">5799</font><strong><font style="color:#000000;">扭曲事实</font></strong><font style="color:#000000;">，</font><strong><font style="color:#DF2A3F;">模糊</font></strong><font style="color:#000000;">杨美娟的大娟巴与360</font><strong><font style="color:#DF2A3F;">威胁开盒、鼓动线下骚扰</font></strong><font style="color:#DF2A3F;">、</font><strong><font style="color:#DF2A3F;">恶意人肉搜索受害者yin私信息</font></strong><font style="color:#000000;">并</font><strong><font style="color:#DF2A3F;">未经允许发布和传播</font></strong><font style="color:#000000;">的暴行，以及杨美娟的大娟巴早已有之的</font><strong><font style="color:#000000;">开盒前科</font></strong><font style="color:#000000;">（上文已介绍）的事实，</font><strong><font style="color:#DF2A3F;">将全部责任推在</font></strong><font style="color:#DF2A3F;">一个将微博个人主页当作自留地、记录生活的</font><strong><font style="color:#DF2A3F;">无辜受害者</font></strong><font style="color:#DF2A3F;">身上</font><font style="color:#000000;">。</font></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/59.jpg" /></p>
-<p><font style="color:rgb(15, 17, 21);">666的做法，是典型的</font><strong><font style="color:rgb(15, 17, 21);">以偏概全谬误</font></strong><font style="color:rgb(15, 17, 21);">：将少数极端群体的行为无限放大，污名化整个微博平台，以此替施暴者的违法行径开脱。ta们把网暴、“开盒”包装成一种“</font><strong><font style="color:#DF2A3F;">寻常事件</font></strong><font style="color:rgb(15, 17, 21);">”，试图用“</font><strong><font style="color:#DF2A3F;">厕所文化</font></strong><font style="color:rgb(15, 17, 21);">”这块遮羞布，掩盖赤裸裸的</font><strong><font style="color:#DF2A3F;">侵权行为</font></strong><font style="color:rgb(15, 17, 21);">，甚至</font><strong><font style="color:#DF2A3F;">反过来规训受害者</font></strong><font style="color:rgb(15, 17, 21);">。</font></p>
-<p>所谓 “玩微博要有防范意识“，则是经典<strong><font style="color:#DF2A3F;">受害者有罪论</font></strong>。666试图以平台属性转嫁责任，<font style="color:rgb(0, 0, 0);">用受害者的“</font><font style="color:#DF2A3F;">防范意识不足</font><font style="color:rgb(0, 0, 0);">”</font><strong><font style="color:rgb(0, 0, 0);"> </font></strong><strong><font style="color:#DF2A3F;">合理化</font></strong><font style="color:#DF2A3F;">施暴者开盒网暴的违法暴力行为</font>。殊不知在<strong>任何平台</strong>，<strong>未经允许发布他人个人信息</strong>都是法律明确禁止的侵权行为，<strong><font style="color:rgb(15, 17, 21);">并可能面临民事、行政乃至刑事上的多重法律责任</font></strong>。</p>
-<p><font style="color:rgb(0, 0, 0);">这种论调不仅是在为施暴者开脱，更是在纵容暴力。它试图使受害者自我审查，让整个社区陷入恐惧，最终只会让恶势力更加肆无忌惮。我们真正需要的，是</font><strong><font style="color:rgb(0, 0, 0);">谴责施暴者</font></strong><font style="color:rgb(0, 0, 0);">！</font></p>
-<hr />
-<p>综上所述，<font style="background-color:#FBDE28;">666</font>，<font style="background-color:#FBDE28;">5799</font>和<font style="background-color:#FBDE28;">杨美娟</font>（hssl）是一伙的，ta们组成了一个关系网，说明lxx圈有一个<strong><font style="color:#DF2A3F;">把异己都打成反酷并辱骂和盒威胁</font></strong>的黑恶势力，<font style="background-color:#FBDE28;">666</font>、<font style="background-color:#FBDE28;">5799</font>也投诚了。</p>
-<p><font style="color:rgb(15, 17, 21);">然而，就在ta们与杨美娟、360在群内围观“开团”、共谋攻击的同时，5799却用小号发布所谓的</font><strong><font style="color:rgb(15, 17, 21);">“反挂条”</font></strong><font style="color:rgb(15, 17, 21);">，试图以</font><strong><font style="color:rgb(15, 17, 21);">“切割”</font></strong><font style="color:rgb(15, 17, 21);">洗白自己。这种一边在私域默契配合，一边在公域撇清关系的操作，无非是想给自己立一个</font><strong><font style="color:rgb(15, 17, 21);">“清白无辜”</font></strong><font style="color:rgb(15, 17, 21);">的牌坊。</font></p>
-<p><font style="color:rgb(15, 17, 21);">但问题是：</font><strong><font style="color:rgb(15, 17, 21);">如果真与开盒团体无关，为何跳出来帮加害者说话、pua受害者？</font></strong></p>
-<p><strong><font style="color:rgb(15, 17, 21);">如果真反对网暴，为何在受害者被围攻时袖手旁观，甚至推波助澜？</font></strong></p>
-<p><strong><font style="color:#DF2A3F;">所谓的“反挂”，究竟是洗清冤屈，还是为了堵住悠悠之口而避重就轻、狗急跳墙？</font></strong></p>
-<hr />
-<p>诸位，<strong>ta们</strong>在微博用各种言论<strong>追着攻击过多少人</strong>？自己<strong>多行不义</strong>，还要<strong>污蔑</strong>挂条制作者举报ta们“禁言”、“炸号”。与其<strong>虚空索敌</strong>，不如好好反思自己是不是<strong>惹了太多人，被人趁乱执行</strong>。</p>
-<p>显然，ta们“<strong>为酷儿这个弱势群体出征”也只是为了自己陷入虚幻的“正义"</strong>，实则仍会借用弱势群体的特征攻击ta们，本质与用酷儿的生理特征攻击酷儿的顺直反terf无异。这样的人与行为，难道不会对酷儿们的整体形象造成抹黑吗？</p>
-<hr />
-<p>:::info<br />
-这些行为早已<strong>越过了合理维权的底线</strong>，不仅<strong>违背法律</strong>，更与<strong>正义背道而驰</strong>。</p>
-<p>我们呼吁所有关心酷儿与LGBTQ+群体权益的人，对此保持清醒认识——<strong>以正义之名行违法之实，不仅无助于争取平等，反而伤害了群体的公信力与社会认同。</strong></p>
-<p>真正的进步，始终建立在尊重法律、珍视公义的基础之上。<br />
-正所谓多行不义必自毙。在此之前，早已有无数受害者：ta们有的遭受侮辱谩骂，有的被骚扰至退网，还有的因诽谤而名誉严重受损，却无力反抗。</p>
-<p><strong>当前呈现出的证据，不过是这些人恶行的冰山一角。</strong>本次被威胁的人们并非第一批受害者，只希望经此一役，能让所有人看清事实。</p>
-<p>:::</p>
-<h3 id="_7"><a class="toclink" href="#_7"><font style="color:#000000;">再造酷儿包容性</font></a><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<p><font style="color:#000000;">小团体利用人肉搜索手段找出受害者私密信息，在120人的群聊中追加辱骂数十条，渲染恐怖范围，选择无辜人士（然而这些人也是酷儿）</font><strong><font style="color:#000000;">打成反酷</font></strong><font style="color:#000000;">制造对立，逼迫站队，甚至私下威胁。</font></p>
-<p><strong><font style="color:#000000;">酷儿友好者</font></strong><font style="color:#000000;">和</font><strong><font style="color:#000000;">探索酷儿理论的行为</font></strong><font style="color:#000000;">都被打成反酷制造对立，ta们逼迫站队，</font><strong><font style="color:#000000;">连坐探索酷儿理论博客的评论区</font></strong><font style="color:#000000;">用户们（并在其中借机发泄私人恩怨）。</font></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/91.jpg" /></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/92.jpg" /><!-- 这是一张图片，ocr 内容为： --><br />
-<img alt="" src="images/93.jpg" /><!-- 这是一张图片，ocr 内容为： --><br />
-<img alt="" src="images/94.jpg" /><!-- 这是一张图片，ocr 内容为： --><br />
-<img alt="" src="images/95.jpg" /><!-- 这是一张图片，ocr 内容为： --><br />
-<img alt="" src="images/96.jpg" /><!-- 这是一张图片，ocr 内容为： --><br />
-<img alt="" src="images/97.jpg" /></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/98.jpeg" /></p>
-<h2 id="dlc5799666"><a class="toclink" href="#dlc5799666"><font style="color:#000000;">dlc：原挂条正文和5799、666的两面三刀</font></a><a class="headerlink" href="#dlc5799666" title="Permanent link">&para;</a></h2>
-<p>你们总说自己是受害者，反击是应该的，然后无底线骚扰始作俑者、始作俑者亲友甚至无关人员。</p>
-<p>做出这种事情的人没有资格指责观众断章取义，因为真正的受害者不会冲进别人主页<strong>规模性地大骂，出口成脏，侮辱人格，撒泼打滚。</strong><br />
-你们就是<strong>加害者</strong>，无数次<strong>事态升级的元凶</strong>，无数次<strong>网暴行为的推手</strong>。</p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/881.jpeg" /></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/882.jpeg" /></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/883.jpeg" /></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/884.jpeg" /></p>
-<!-- 这是一张图片，ocr 内容为： -->
-<p><img alt="" src="images/885.jpeg" /></p>
+    <h2 id="_1"><a class="toclink" href="#_1">前言</a><a class="headerlink" href="#_1" title="Permanent link">&para;</a>
+    </h2>
+
+    <strong>
+        省流：
+    </strong></p>
+    <ul>
+        <li><strong>
+                @杨美娟的大娟巴（以下简称杨美娟、海市蜃楼或hssl）曾经开盒骚扰性少数，现在又和360一起用人肉手段扒人微博隐私信息，开盒威胁所有持反对态度的人，制造高压局面。
+            </strong></li>
+        <li><strong>
+                @化思潮为膏潮5799（以下简称5799）和@Etherealune666（以下简称666，小号@泯哼）助纣为虐，反挂条谎话连篇，包庇杨美娟人肉、开盒和威胁，参与网暴施压，并把所有的网暴行为美化为“受害者的自我防卫”。
+            </strong></li>
+    </ul>
+
+    <div class="toc-container">
+        <div class="toc-title">目录</div>
+        <ul class="toc-list">
+            <li><a href="#_5">一、开盒铁证：杨美娟为开盒惯犯且开盒性少数</a></li>
+            <li><a href="#_6">二、杨美娟和360人肉搜索篇</a></li>
+            <li><a href="#_7">三、杨美娟/360/5799/666在同一个群里共商大事</a></li>
+            <li><a href="#dlc5799666">dlc：原挂条正文和5799、666的两面三刀</a></li>
+        </ul>
+    </div>
+    <p>:::</p>
+    <p>
+        
+    </p>
+    <p>
+        继上次挂条仅存在一小时就被举报封禁后，涉事人<strong>5799</strong>的小号<strong>@还我命来5799</strong>发布了反挂条，其主张主要有四：
+    </p>
+    <h4 id="_2"><a class="toclink" href="#_5"><strong>一、没有实质开盒</strong></a><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+    <h4 id="_3"><a class="toclink" href="#_6"><strong>二、举报行为与“人肉搜索”“开盒”行为没有区别</strong></a><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+    <h4 id="_4"><a class="toclink" href="#_7"><strong>三、网暴方不存在小团体</strong></a><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+    <h4 id="_41"><a class="toclink" href="#_7"><strong>四、5799和666是无辜被连坐</strong></a><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+    <p>
+        并将原挂条对对方一系列侵害行为的陈述，称为“抹黑”。
+    </p>
+    <p>
+        是<strong>【事实】</strong>还是<strong>【抹黑】</strong>？
+    </p>
+    <p>
+        谁才是<strong>【加害者】</strong>？是谁在<strong>【传播他人隐私】</strong>？是谁在<strong>【组团进行网络暴力】</strong>？谁在<strong>【连坐】</strong>？谁是真的在<strong>【污蔑】</strong>？<strong>我相信群众的目光是雪亮的。</strong>此文能做的，只有将大家所承受的一切都记录在案，并呈递至诸位眼前。
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/01.jpg" /></p>
+    <p>本次人肉信息传播者360在qq群内发言：“本来<font style="background-color:#FBDE28;">这回</font>就没开盒”。很好，那就来盘点一下杨美娟之前的开盒战绩。</p>
+    <h2 id="_5"><a class="toclink" href="#_5"><strong>一、开盒铁证：杨美娟为开盒惯犯且开盒性少数</strong></a><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="杨美娟开合现场，无需多言" src="images/02.png" /></p>
+    <p><strong>然而，杨美娟真的只开盒恐跨人士吗？</strong><strong> </strong></p>
+    <p>
+        杨美娟（早年微博昵称为“你就是那海市蜃楼”）早<strong>在2024年9月中旬，就在lxx圈已卷入过一场开盒纷争。</strong>
+    </p>
+    <p><strong>杨美娟称类圈一位</strong><strong>未成年人</strong><strong>“反跨反酷”并教唆人将其开盒；随后，</strong><strong><font style="background-color:#FBDE28;">从未持过反跨反酷立场</font></strong><strong>的</strong><strong>苦主</strong><strong><font style="background-color:#FBDE28;">赛博幽灵（小号wiring_cook)</font></strong><strong>，仅因为</strong><strong>发表</strong><strong><font style="background-color:#FBDE28;">不支持开盒wcn</font></strong><strong>意见</strong><strong>，就被</strong><strong>连坐开盒</strong><strong>。</strong></p>
+    <p>
+        杨美娟<strong>不仅恐吓苦主</strong><strong><font style="color:rgb(15, 17, 21);">赛博幽灵本人</font></strong><strong>，还继续</strong><strong>恐吓转发区持相同观点的网友</strong><strong>。</strong>
+    </p>
+    <p>
+        而被<strong><font style="color:#000000;background-color:#FBDE28;">连坐开盒威胁</font></strong><font style="color:#000000;background-color:#FBDE28;">、</font><strong><font style="color:#000000;background-color:#FBDE28;">被扒现生信息、受短信轰炸骚扰</font></strong>的苦主，正是<strong>杨美娟口口声声说要保护的</strong><strong><font style="color:rgba(255,59,59,1);">“性少数”</font></strong><strong>。</strong>
+    </p>
+    <p>
+        （<strong>下附图，已被迫销号</strong>）
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/03.png" /></p>
+    <p><strong>（下图打码部分为涉及受害者身份的私密信息,是小号艾特+QQ号+全名）</strong></p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/04.png" /></p>
+    <p>
+        大家都知道杨美娟是开盒人，而杨美娟对此的回应是：<strong>开盒人不是我，是我</strong><strong><font style="color:#000000;background-color:#ECAA04;">朋友</font></strong><strong>。</strong>我们已经找到了这位<font style="color:#000000;background-color:#ECAA04;">“</font><strong><font style="color:#000000;background-color:#ECAA04;">朋友”</font></strong>，正是在杨美娟hssl时期在其微博留过言的<strong><font style="color:#000000;background-color:#ECAA04;">芒果椰奶冻</font></strong>。
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/05.png" /></p>
+    <p>
+        这位被<font style="color:#000000;background-color:#FBDE28;">杨美娟</font>召唤出来的“前笔仙”<font style="color:#000000;background-color:#ECAA04;">芒果椰奶冻</font>（小号@苦命的奥利安）是圈外人士，杨美娟教唆并指使芒果椰奶冻开盒<strong><font style="color:#DF2A3F;">反terf友酷</font><font style="color:#000000;">赛博幽灵 </font></strong>
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/06.png" /></p>
+    <p>
+        面对受害者的控诉，杨美娟的回应是<strong>：</strong><strong><font style="color:rgba(255,59,59,1);">立即与芒果椰奶冻切割</font></strong>。杨美娟利用芒果椰奶冻其不稳定的精神状态、开盒技术、短信轰炸渠道达到ta宣泄暴力，封缄异见的目的后，再立即抛弃这个工具，<strong><font style="color:rgba(255,59,59,1);">假装自己与此事无关</font></strong>。
+    </p>
+    <p>不仅如此，ymj在拱火成功后，面对逐渐不可控的损害后果，竟<font style="color:#DF2A3F;">劝诫</font>受害者向芒果椰奶冻滑跪<font style="color:#DF2A3F;">认错
+        </font>。</p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="自称无关人士" src="images/07.jpg" /></p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="劝受害者【赛博幽灵】滑跪" src="images/08.png" /></p>
+    <p>
+        <font style="color:#000000;background-color:#FBDE28;">海市蜃楼</font>切割了负责开盒的<strong><font style="color:#000000;background-color:#ECAA04;">芒果椰奶冻</font></strong>并<strong>转生新号</strong><strong><font style="background-color:#FBDE28;">杨美娟的大娟巴</font></strong><strong>后，</strong>杨美娟发现<strong><font style="color:rgba(255,59,59,1);">盒武器</font></strong>威慑不仅<strong>可以让异己者全部</strong><strong><font style="color:rgba(255,59,59,1);">闭嘴</font></strong>，还能通过<strong><font style="color:rgba(255,59,59,1);">连坐胁迫其互关、亲友</font></strong>等方式，<strong>逼被ta锁定为施暴对象的人出面承受ta的攻击性。</strong>
+    </p>
+    <p>
+        于是在<font style="color:rgba(255,59,59,1);">本次事件</font>中，ta又开始<strong>营造开盒的恐怖氛围</strong>，甚至直接发表<strong>连坐开盒言论</strong>（下附图）。
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/09.png" /></p>
+    <p>
+        （互关1）
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/10.png" /></p>
+    <p>
+        （互关2）
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/11.png" /></p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/12.jpg" /></p>
+    <p>受害者之一在微博的控诉，由<strong>受害者们公示事件中的意见不统一</strong>（下图）可以看出，5799在反挂条中的内容，只是为了将受害者们<strong><font style="color:#DF2A3F;">按观点进行分割</font></strong>（甚至还反咬一口，<strong>将ta们投射为和自己一样的“小团体”</strong>）。</p>
+    <p>
+        <font style="color:#DF2A3F;">ta刻意引导大众焦点，</font><strong><font style="color:#DF2A3F;">模糊己方小团体冲进受害者博客进行网暴，默许杨美娟人肉搜索性少数路人</font></strong><font style="color:#DF2A3F;">的劣行</font><strong><font style="color:#DF2A3F;">，反倒扯酷儿立场作为排除异己，攻击受害者们的手段</font></strong><font style="color:#DF2A3F;">！</font>
+    </p>
+    <p>正如受害者在<strong>第三点</strong>中所说：<strong>ta们凭什么代表全体酷儿出征</strong>？</p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/13.png" /></p>
+    <p>
+        由此可见，无论各位是什么身份，<strong>只要和小团体的敌人有关系，就有可能被连坐开盒。</strong>
+        
+    </p>
+    <p>
+        lxx圈已经出现了<strong>把异己都打成反酷，并进行开盒与辱骂的集体</strong>，其中<strong><font style="color:#000000;background-color:#FBDE28;">杨美娟</font></strong><strong>、</strong><strong><font style="color:#000000;background-color:#FBDE28;">360</font></strong>等人已有<font style="color:#000000;background-color:#FBDE28;">多次</font><strong><font style="color:#DF2A3F;background-color:#FBDE28;">威胁开盒</font></strong>、<strong><font style="color:#DF2A3F;background-color:#FBDE28;">教唆开盒</font></strong>与<strong><font style="color:#DF2A3F;background-color:#FBDE28;">直接开盒</font></strong>的行为，<strong><font style="color:#DF2A3F;background-color:#FBDE28;">5799</font></strong><strong><font style="color:#DF2A3F;">与</font></strong><strong><font style="color:#DF2A3F;background-color:#FBDE28;">666</font></strong><strong><font style="color:#DF2A3F;">两人</font></strong><font style="color:#DF2A3F;">在群内默许360的开盒威胁言论</font>，在已知杨美娟有开盒行为之后仍然进行<strong><font style="color:#DF2A3F;background-color:#FBDE28;">包庇</font></strong><strong>、</strong><strong><font style="color:#DF2A3F;background-color:#FBDE28;">声援</font></strong>。
+    </p>
+    <p>
+        这样的行为早已与5799和杨美娟宣称的“为酷儿反击”，“保护酷儿”早已<strong><font style="color:#DF2A3F;">相去甚远</font></strong>。
+    </p>
+    <p>
+        事实是，ta为了享受<strong>拿起道德大棒无限施加暴力的快感</strong>，已经<strong>伤害了不止一个酷儿</strong>。与ta意见不同的<strong>酷儿</strong>，不仅会遭受<strong>网络暴力</strong>、<strong>开盒人肉</strong>等真实可感的攻击，还都会被ta及ta的小团体瞬间<strong>归为女性</strong>，并给予<strong>“母zhu”</strong>等绰号，彻底<strong>misgender，甚至被指出，也只是一句轻飘飘的“对不起”。</strong>
+    </p>
+    <p><strong>而其ta受害人甚至没有misgender 5799（已向5799本人确认过，5799无所谓代词使用），</strong><strong><font style="color:#DF2A3F;">加害者们却是冲进他人主页转发区进行恶意揣测、攻击</font></strong>。可见这个小团体<strong>对misgender的“抵制”、对代词称呼的要求</strong>（如：对被说过可以使用<strong>任意代词</strong>的人，要求对方在<strong>未经说明</strong>的情况下，<strong>猜出</strong>对方希望被不定时切换不同代词称呼，并猜出各个代词的切换频率），<strong>会随着ta们的心情随意改变</strong>。</p>
+    <p>
+        可见，在ta们眼中，“尊重”酷儿，<strong>不是</strong>根植内心的信念，<strong>而是</strong>ta们<strong>打击异己、建立话语霸权的一把5器</strong>。
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="“用得均匀”" src="images/14.png" /></p>
+    <h2 id="_6"><a class="toclink" href="#360"><strong>二、杨美娟和360人肉搜索篇</strong></a><a class="headerlink" href="#360" title="Permanent link">&para;</a></h2>
+    <h3 id="360"><a class="toclink" href="#_6">请看<strong>人肉搜索</strong>和<strong>开盒</strong>的<strong>基本定义（二者在法律意义上并无区别，都是同类违法行为）</strong>：
+        </a><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/15.png" /><!-- 这是一张图片，ocr 内容为： --><br />
+        <img alt="" src="images/16.png" />
+    </p>
+    <p>杨美娟和360<strong>人肉开盒并传播</strong>了被威胁的异见者及<strong>毫无关系的第三人</strong>的个人信息，包括<strong>姓名，QQ号</strong>及<strong>学校</strong>。群里有人发表<strong>“圣地巡礼”</strong>的言论，暗示群友<strong>线下骚扰</strong>。</p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/17.jpg" /></p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/18.jpg" /></p>
+    <p>
+        而<font style="color:#000000;background-color:#FBDE28;">杨美娟的大娟巴</font>对自己的开盒行为进行辩解的方式——就是将<strong>受害者隐私信息</strong>在自己微博主页<strong>再次无码公开传播。</strong>
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="此为杨美娟小号" src="images/19.png" />
+        
+    </p>
+    <p>
+        并和360在<strong>120人QQ群</strong>中继续<strong>肆意</strong><strong><font style="color:#DF2A3F;">发布</font></strong><strong>、</strong><strong><font style="color:#DF2A3F;">辱骂</font></strong>。在受害者微博主页<strong><font style="color:#DF2A3F;">地毯式搜寻个人信息</font></strong>后，将受害者<strong>半年多前偶然进行的生活分享</strong>诽谤并辱骂其为<strong>“</strong><strong><font style="color:rgba(255,107,107,1);background-color:#000000;">露音癖</font></strong><strong>”</strong>、<strong>“</strong><strong><font style="color:rgba(255,107,107,1);background-color:#000000;">故意天天晒个人信息</font></strong><strong>”</strong>；对于挖掘出的个人信息，在群内进行针对性的<strong><font style="color:#DF2A3F;">攻击</font></strong><strong>、</strong><strong><font style="color:#DF2A3F;">辱骂</font></strong>。
+    </p>
+    <p>
+        更有甚者，明知<strong>杨美娟有人肉搜索与二次传播受害者私人信息的行为</strong>后仍为杨美娟写下洗白开盒行为的博客。（另：此博客格式与5799反瓜条博客格式相同）
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="此为杨美娟小号" src="images/20.jpg" /></p>
+    <p><strong>受害者</strong>完全<strong>与争议中心无关联</strong>，却<strong>无辜承受</strong>被<strong>开盒人肉、曝光个人信息</strong>的<strong>霸凌</strong>，事后还要<strong>被施暴者PUA</strong>（扭曲成受害者的错）<strong>、继续传播个人信息</strong>，这对受害者造成的伤害<strong>不可估量</strong>。</p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/21.png" /><!-- 这是一张图片，ocr 内容为： --><br />
+        <img alt="" src="images/22.png" />
+    </p>
+    <p>
+        此后又<strong>人肉了另一个人</strong>，并将这两人连带社交帐号及个人隐私信息，均<strong>恶意P图</strong>发布在120人QQ群内<strong>。</strong>
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/23.png" /><!-- 这是一张图片，ocr 内容为： --><br />
+        <img alt="" src="images/24.jpeg" />
+    </p>
+    <p>
+        杨美娟和360在<strong>无辜受害者</strong>的信息<strong>未主动授权</strong>给任何人的前提下，动员团体在其微博主页进行<strong><font style="color:#DF2A3F;">地毯式搜集</font></strong>，扒下来<strong><font style="color:#DF2A3F;">公开发布</font></strong><strong>、</strong><strong><font style="color:#DF2A3F;">羞辱</font></strong><strong>、</strong><strong><font style="color:#DF2A3F;">人身攻击</font></strong>，<strong>完全符合</strong><strong><font style="color:#DF2A3F;background-color:#FBDE28;">开盒</font></strong><strong>、</strong><strong><font style="color:#DF2A3F;background-color:#FBDE28;">人肉搜索</font></strong><strong>的定义</strong>。这是完全的<strong><font style="color:#DF2A3F;background-color:#FBDE28;">违法行为</font></strong><strong>、</strong><strong><font style="color:#DF2A3F;background-color:#FBDE28;">暴力行为</font></strong>。
+    </p>
+    <p>
+         <strong>如果连这个也看不懂，还可以请出杨美娟大帝的名言：不懂去问deepseek。</strong>
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/25.png" /></p>
+    <h2 id="_7"><a class="toclink" href="#3605799666">三、杨美娟/360/5799/666在同一个群里共商大事</a><a
+            class="headerlink" href="#3605799666" title="Permanent link">&para;</a></h2>
+    <p>
+        杨美娟向异见者的互关发出针对异见者的<strong>开盒威胁</strong>及<strong>连坐他人的威胁后，</strong>5799与666表面上在微博<font style="color:#DF2A3F;">卖惨</font>，声称自己与盒事件无关，声称不存在“小团体”：
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/51.jpg" /><!-- 这是一张图片，ocr 内容为： --><br />
+        <img alt="" src="images/52.jpeg" />
+    </p>
+    <p><strong>实则在群内观看、响应“开团”。</strong></p>
+    <p>
+        （EthV=etln=etln666，cjg=陈建国=5799）
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/53.png" /></p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/54.png" /></p>
+    <p>
+        并在微博散布<strong><font style="color:#DF2A3F;">受害者有罪论</font></strong>的观点，<font style="color:rgb(15, 17, 21);">试图</font><strong><font style="color:#DF2A3F;">为施暴行为正名</font></strong>，一边逃避责任，一边声称自己<strong>“事出有因”</strong>，无比虚伪！
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="究竟是何等法盲才会把举报、炸号跟受害者真实信息被未经允许传播画上等号？" src="images/55.jpeg" /></p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="强行将【原挂条中采集的施暴者言论】与【受害人被收集、传播的现生信息】并列，依旧法盲" src="images/56.jpg" /></p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="依旧法盲，详见下段" src="images/57.png" /></p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="《中华人民共和国个人信息保护法》已对“个人信息”的定义及其法律性质作出了明确规定。5799在【反挂条】中声称“初版挂条”的行为与“开盒”无异，并指称该行为侵犯了其隐私。这一说法缺乏事实与法律依据，涉嫌构成诽谤。"
+            src="images/58.png" /></p>
+    <p>
+        5799<strong>扭曲事实</strong>，<strong><font style="color:#DF2A3F;">模糊</font></strong>杨美娟的大娟巴与360<strong><font style="color:#DF2A3F;">威胁开盒、鼓动线下骚扰</font></strong><font style="color:#DF2A3F;">、</font><strong><font style="color:#DF2A3F;">恶意人肉搜索受害者yin私信息</font></strong>并<strong><font style="color:#DF2A3F;">未经允许发布和传播</font></strong>的暴行，以及杨美娟的大娟巴早已有之的<strong>开盒前科</strong>（上文已介绍）的事实，<strong><font style="color:#DF2A3F;">将全部责任推在</font></strong><font style="color:#DF2A3F;">一个将微博个人主页当作自留地、记录生活的</font><strong><font style="color:#DF2A3F;">无辜受害者</font></strong><font style="color:#DF2A3F;">身上</font>。
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/59.jpg" /></p>
+    <p>
+        <font style="color:rgb(15, 17, 21);">666的做法，是典型的</font><strong><font style="color:rgb(15, 17, 21);">以偏概全谬误</font></strong><font style="color:rgb(15, 17, 21);">：将少数极端群体的行为无限放大，污名化整个微博平台，以此替施暴者的违法行径开脱。ta们把网暴、“开盒”包装成一种“</font><strong><font style="color:#DF2A3F;">寻常事件</font></strong><font style="color:rgb(15, 17, 21);">”，试图用“</font><strong><font style="color:#DF2A3F;">厕所文化</font></strong><font style="color:rgb(15, 17, 21);">”这块遮羞布，掩盖赤裸裸的</font><strong><font style="color:#DF2A3F;">侵权行为</font></strong><font style="color:rgb(15, 17, 21);">，甚至</font><strong><font style="color:#DF2A3F;">反过来规训受害者</font></strong><font style="color:rgb(15, 17, 21);">。</font>
+    </p>
+    <p>所谓 “玩微博要有防范意识“，则是经典<strong><font style="color:#DF2A3F;">受害者有罪论</font></strong>。666试图以平台属性转嫁责任，<font style="color:rgb(0, 0, 0);">用受害者的“</font><font style="color:#DF2A3F;">防范意识不足</font><font style="color:rgb(0, 0, 0);">”</font><strong><font style="color:rgb(0, 0, 0);"> </font></strong><strong><font style="color:#DF2A3F;">合理化</font></strong><font style="color:#DF2A3F;">施暴者开盒网暴的违法暴力行为</font>。殊不知在<strong>任何平台</strong>，<strong>未经允许发布他人个人信息</strong>都是法律明确禁止的侵权行为，<strong><font style="color:rgb(15, 17, 21);">并可能面临民事、行政乃至刑事上的多重法律责任</font></strong>。
+    </p>
+    <p>
+        <font style="color:rgb(0, 0, 0);">这种论调不仅是在为施暴者开脱，更是在纵容暴力。它试图使受害者自我审查，让整个社区陷入恐惧，最终只会让恶势力更加肆无忌惮。我们真正需要的，是</font><strong><font style="color:rgb(0, 0, 0);">谴责施暴者</font></strong><font style="color:rgb(0, 0, 0);">！</font>
+    </p>
+    <hr />
+    <p>综上所述，<font style="background-color:#FBDE28;">666</font>，<font style="background-color:#FBDE28;">5799</font>和<font
+            style="background-color:#FBDE28;">杨美娟</font>（hssl）是一伙的，ta们组成了一个关系网，说明lxx圈有一个<strong><font style="color:#DF2A3F;">把异己都打成反酷并辱骂和盒威胁</font></strong>的黑恶势力，<font style="background-color:#FBDE28;">666</font>、<font style="background-color:#FBDE28;">5799
+        </font>也投诚了。</p>
+    <p>
+        <font style="color:rgb(15, 17, 21);">然而，就在ta们与杨美娟、360在群内围观“开团”、共谋攻击的同时，5799却用小号发布所谓的</font><strong><font style="color:rgb(15, 17, 21);">“反挂条”</font></strong><font style="color:rgb(15, 17, 21);">，试图以</font><strong><font style="color:rgb(15, 17, 21);">“切割”</font></strong><font style="color:rgb(15, 17, 21);">洗白自己。这种一边在私域默契配合，一边在公域撇清关系的操作，无非是想给自己立一个</font><strong><font style="color:rgb(15, 17, 21);">“清白无辜”</font></strong><font style="color:rgb(15, 17, 21);">的牌坊。</font>
+    </p>
+    <p>
+        <font style="color:rgb(15, 17, 21);">但问题是：</font><strong><font style="color:rgb(15, 17, 21);">如果真与开盒团体无关，为何跳出来帮加害者说话、pua受害者？</font></strong>
+    </p>
+    <p><strong><font style="color:rgb(15, 17, 21);">如果真反对网暴，为何在受害者被围攻时袖手旁观，甚至推波助澜？</font></strong></p>
+    <p><strong><font style="color:#DF2A3F;">所谓的“反挂”，究竟是洗清冤屈，还是为了堵住悠悠之口而避重就轻、狗急跳墙？</font></strong></p>
+    <hr />
+    <p>诸位，<strong>ta们</strong>在微博用各种言论<strong>追着攻击过多少人</strong>？自己<strong>多行不义</strong>，还要<strong>污蔑</strong>挂条制作者举报ta们“禁言”、“炸号”。与其<strong>虚空索敌</strong>，不如好好反思自己是不是<strong>惹了太多人，被人趁乱执行</strong>。
+    </p>
+    <p>显然，ta们“<strong>为酷儿这个弱势群体出征”也只是为了自己陷入虚幻的“正义"</strong>，实则仍会借用弱势群体的特征攻击ta们，本质与用酷儿的生理特征攻击酷儿的顺直反terf无异。这样的人与行为，难道不会对酷儿们的整体形象造成抹黑吗？
+    </p>
+    <hr />
+    <p>:::info<br />
+        这些行为早已<strong>越过了合理维权的底线</strong>，不仅<strong>违背法律</strong>，更与<strong>正义背道而驰</strong>。</p>
+    <p>我们呼吁所有关心酷儿与LGBTQ+群体权益的人，对此保持清醒认识——<strong>以正义之名行违法之实，不仅无助于争取平等，反而伤害了群体的公信力与社会认同。</strong></p>
+    <p>真正的进步，始终建立在尊重法律、珍视公义的基础之上。<br />
+        正所谓多行不义必自毙。在此之前，早已有无数受害者：ta们有的遭受侮辱谩骂，有的被骚扰至退网，还有的因诽谤而名誉严重受损，却无力反抗。</p>
+    <p><strong>当前呈现出的证据，不过是这些人恶行的冰山一角。</strong>本次被威胁的人们并非第一批受害者，只希望经此一役，能让所有人看清事实。</p>
+    <p>:::</p>
+    <h3 id="_7"><a class="toclink" href="#_7">再造酷儿包容性
+        </a><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+    <p>
+        小团体利用人肉搜索手段找出受害者私密信息，在120人的群聊中追加辱骂数十条，渲染恐怖范围，选择无辜人士（然而这些人也是酷儿）<strong>打成反酷</strong>制造对立，逼迫站队，甚至私下威胁。
+    </p>
+    <p><strong>酷儿友好者</strong>和<strong>探索酷儿理论的行为</strong>都被打成反酷制造对立，ta们逼迫站队，<strong>连坐探索酷儿理论博客的评论区</strong>用户们（并在其中借机发泄私人恩怨）。</p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/91.jpg" /></p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/92.jpg" /><!-- 这是一张图片，ocr 内容为： --><br />
+        <img alt="" src="images/93.jpg" /><!-- 这是一张图片，ocr 内容为： --><br />
+        <img alt="" src="images/94.jpg" /><!-- 这是一张图片，ocr 内容为： --><br />
+        <img alt="" src="images/95.jpg" /><!-- 这是一张图片，ocr 内容为： --><br />
+        <img alt="" src="images/96.jpg" /><!-- 这是一张图片，ocr 内容为： --><br />
+        <img alt="" src="images/97.jpg" />
+    </p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/98.jpeg" /></p>
+    <h2 id="dlc5799666"><a class="toclink" href="#dlc5799666">dlc：原挂条正文和5799、666的两面三刀
+        </a><a class="headerlink" href="#dlc5799666" title="Permanent link">&para;</a></h2>
+    <p>你们总说自己是受害者，反击是应该的，然后无底线骚扰始作俑者、始作俑者亲友甚至无关人员。</p>
+    <p>做出这种事情的人没有资格指责观众断章取义，因为真正的受害者不会冲进别人主页<strong>规模性地大骂，出口成脏，侮辱人格，撒泼打滚。</strong><br />
+        你们就是<strong>加害者</strong>，无数次<strong>事态升级的元凶</strong>，无数次<strong>网暴行为的推手</strong>。</p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/881.jpeg" /></p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/882.jpeg" /></p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/883.jpeg" /></p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/884.jpeg" /></p>
+    <!-- 这是一张图片，ocr 内容为： -->
+    <p><img alt="" src="images/885.jpeg" /></p>
 </body>
+
 </html>
