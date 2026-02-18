@@ -290,8 +290,6 @@
     </p>
     <!-- 这是一张图片，ocr 内容为： -->
     <p><img alt="" src="images/17.jpg" /></p>
-    <!-- 这是一张图片，ocr 内容为： -->
-    <p><img alt="" src="images/18.jpg" /></p>
     <p>
         而<font style="color:#000000;background-color:#FBDE28;">杨美娟的大娟巴</font>
         对自己的开盒行为进行辩解的方式——就是将<strong>受害者隐私信息</strong>在自己微博主页<strong>再次无码公开传播。</strong>
@@ -332,7 +330,7 @@
         此后又<strong>人肉了另一个人</strong>，并将这两人连带社交帐号及个人隐私信息，均<strong>恶意P图</strong>发布在120人QQ群内<strong>。</strong>
     </p>
     <!-- 这是一张图片，ocr 内容为： -->
-    <p><img alt="" src="images/23.png" /><!-- 这是一张图片，ocr 内容为： --><br />
+    <p><img alt="" src="images/23.jpg" /><!-- 这是一张图片，ocr 内容为： --><br />
         <img alt="" src="images/24.jpeg" />
     </p>
     <p>
@@ -513,8 +511,8 @@
     </p>
     <!-- 这是一张图片，ocr 内容为： -->
     <p><img alt="" src="images/98.jpeg" /></p>
-    <h2 id="dlc5799666">dlc：原挂条正文和5799、666的两面三刀
-        </a><a class="headerlink" href="#dlc5799666" title="Permanent link">&para;</a></h2>
+    <h2 id="dlc5799666"><a href="./原挂条缺图.html">dlc：原挂条正文和5799、666的两面三刀</a>
+        <a class="headerlink" href="./原挂条缺图.html" title="dlc5799666">&para;</a></h2>
     <p>你们总说自己是受害者，反击是应该的，然后无底线骚扰始作俑者、始作俑者亲友甚至无关人员。</p>
     <p>做出这种事情的人没有资格指责观众断章取义，因为真正的受害者不会冲进别人主页<strong>规模性地大骂，出口成脏，侮辱人格，撒泼打滚。</strong><br />
         你们就是<strong>加害者</strong>，无数次<strong>事态升级的元凶</strong>，无数次<strong>网暴行为的推手</strong>。</p>
@@ -528,6 +526,170 @@
     <p><img alt="" src="images/884.jpeg" /></p>
     <!-- 这是一张图片，ocr 内容为： -->
     <p><img alt="" src="images/885.jpeg" /></p>
+
+
+        <!-- 弹出目录按钮和面板 (开始) -->
+<style>
+  /* 浮动按钮 */
+  .toc-popup-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #0969da;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+  }
+  .toc-popup-btn:hover {
+    background-color: #0550ae;
+  }
+  /* 弹出面板 */
+  .toc-panel {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 300px;
+    max-height: 70vh;
+    background-color: #ffffff;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 16px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none; /* 默认隐藏 */
+    font-size: 14px;
+  }
+  .toc-panel.show {
+    display: block;
+  }
+  /* 目录列表样式 (沿用原有 toc 风格) */
+  .toc-panel ul {
+    margin: 0;
+    padding-left: 1.2em;
+    list-style-type: none;
+  }
+  .toc-panel li {
+    margin: 6px 0;
+  }
+  .toc-panel a {
+    text-decoration: none;
+    color: #0969da;
+    font-weight: 500;
+  }
+  .toc-panel a:hover {
+    color: #0550ae;
+    background-color: rgba(9,105,218,0.1);
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+  /* 层级缩进 */
+  .toc-panel .level-2 { margin-left: 0; }
+  .toc-panel .level-3 { margin-left: 1em; }
+  .toc-panel .level-4 { margin-left: 2em; }
+  /* 关闭按钮 (可选) */
+  .toc-panel .close-btn {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    color: #57606a;
+    line-height: 1;
+  }
+  .toc-panel .close-btn:hover {
+    color: #24292f;
+  }
+  /* 面板头部 */
+  .toc-panel h4 {
+    margin: 0 0 12px 0;
+    border-bottom: 1px solid #d0d7de;
+    padding-bottom: 8px;
+    font-weight: 600;
+  }
+</style>
+
+<!-- 按钮和面板 HTML -->
+<div class="toc-popup-btn" id="tocPopupBtn">📖</div>
+<div class="toc-panel" id="tocPanel">
+  <span class="close-btn" id="tocCloseBtn">&times;</span>
+  <h4>目录</h4>
+  <div id="tocContent"></div>
+</div>
+
+<script>
+(function() {
+  // 确保 DOM 加载完成后执行
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('tocPopupBtn');
+    const panel = document.getElementById('tocPanel');
+    const closeBtn = document.getElementById('tocCloseBtn');
+    const tocContent = document.getElementById('tocContent');
+
+    // --- 动态生成目录 ---
+    function buildTOC() {
+      // 获取所有带 id 的标题 (h2, h3, h4) —— 可根据需要调整
+      const headers = document.querySelectorAll('h2[id]');
+      if (headers.length === 0) {
+        tocContent.innerHTML = '<p>暂无目录</p>';
+        return;
+      }
+
+      let html = '<ul>';
+      let lastLevel = 2; // 假设从 h2 开始
+
+      headers.forEach(header => {
+        const level = parseInt(header.tagName[1]); // 'H2' -> 2
+        const id = header.id;
+        // 清理标题文本（去除内嵌的加粗、字体标签等）
+        let text = header.innerText || header.textContent;
+        // 移除可能存在的 [§] 等符号（可选）
+        text = text.replace(/§|¶|#/g, '').trim();
+
+        // 处理层级缩进（简单的逻辑：如果当前级别比上一个深，增加缩进；否则减少）
+        // 为了简化，我们直接通过 CSS 类控制缩进
+        html += `<li class="level-${level}"><a href="#${id}">${text}</a></li>`;
+      });
+
+      html += '</ul>';
+      tocContent.innerHTML = html;
+    }
+
+    buildTOC();
+
+    // --- 按钮点击切换面板 ---
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      panel.classList.toggle('show');
+    });
+
+    // --- 关闭按钮 ---
+    closeBtn.addEventListener('click', function() {
+      panel.classList.remove('show');
+    });
+
+    // --- 点击面板外部关闭 (可选) ---
+    document.addEventListener('click', function(e) {
+      if (!panel.contains(e.target) && e.target !== btn) {
+        panel.classList.remove('show');
+      }
+    });
+
+    // 阻止面板内部点击事件冒泡到 document（防止点击面板内关闭）
+    panel.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  });
+})();
+</script>
 </body>
 
 </html>
